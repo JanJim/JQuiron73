@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://janjim.github.io/jquiron73/sitemap.xml
