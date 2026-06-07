@@ -1,0 +1,64 @@
+---
+title: "Guía: Cómo crear tu primer componente en React"
+date: "2024-01-20"
+author: "JQuiron73"
+excerpt: "Una introducción práctica a la creación de componentes React funcionales con hooks."
+tags: ["react", "javascript", "tutorial"]
+---
+
+# Cómo crear tu primer componente en React
+
+React es una librería de JavaScript que facilita la creación de interfaces de usuario interactivas. En este artículo, te enseñaré cómo crear tu primer componente.
+
+## ¿Qué es un componente?
+
+Un componente es una pieza reutilizable de tu interfaz. Piensa en él como un bloque de construcción que puedes usar en múltiples lugares.
+
+## Componente Funcional Simple
+
+```jsx
+function Saludo() {
+  return <h1>¡Hola, mundo!</h1>;
+}
+
+export default Saludo;
+```
+
+## Usando Props
+
+Los props permiten pasar datos a tus componentes:
+
+```jsx
+function Saludo({ nombre }) {
+  return <h1>¡Hola, {nombre}!</h1>;
+}
+
+export default Saludo;
+```
+
+## Con Hooks
+
+Los hooks como `useState` te permiten agregar estado a componentes funcionales:
+
+```jsx
+import { useState } from 'react';
+
+function Contador() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(count + 1)}>
+        Incrementar
+      </button>
+    </div>
+  );
+}
+
+export default Contador;
+```
+
+## Conclusión
+
+¡Ya sabes lo básico para crear componentes React! Practica creando tus propios componentes y experimenta con diferentes funcionalidades.
